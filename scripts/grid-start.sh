@@ -1,8 +1,7 @@
 #!/bin/bash
 
-SERVERS=$(cat $HADOOP_CONF_DIR/slaves);
 echo "I am a bad person...stopping iptables on the grid...actually setup the ports when you are not lazy!!";
-for SERVER in $SERVERS; do
+for SERVER in $(cat $HADOOP_CONF_DIR/slaves); do
 	ssh root@$SERVER service iptables stop;
 done;
 
