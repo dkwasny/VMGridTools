@@ -18,3 +18,5 @@ for SERVER in $(cat $ZOOKEEPER_CONFIG_FILE | grep ^server | sed s_server\.[0-9]=
 		$ZOOKEEPER_HOME/bin/zkServer.sh $1 $ZOOKEEPER_CONFIG_FILE \
 	";
 done;
+
+$HBASE_HOME/bin/$1-hbase.sh;
