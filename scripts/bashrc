@@ -12,6 +12,9 @@ export HADOOP_YARN_HOME=$HADOOP_COMMON_HOME;
 export HADOOP_CONF_DIR=$GRID_HOME/conf;
 export YARN_CONF_DIR=$HADOOP_CONF_DIR;
 
+export HBASE_HOME=/home/dkwasny/Utilities/hbase-0.96.0-hadoop2;
+export HBASE_CONF_DIR=$HADOOP_CONF_DIR;
+
 export ZOOKEEPER_HOME=/home/dkwasny/Utilities/zookeeper-3.4.5;
 export ZOO_LOG_DIR=$ZOOKEEPER_HOME/logs
 
