@@ -12,7 +12,6 @@ $HADOOP_COMMON_HOME/sbin/mr-jobhistory-daemon.sh $1 historyserver;
 # Only start zookeeper on the configured nodes
 ZOOKEEPER_CONFIG_FILE=$HADOOP_CONF_DIR/zoo.cfg; 
 for SERVER in $(cat $ZOOKEEPER_CONFIG_FILE | grep ^server | sed s_server\.[0-9]=__ | sed s_:.*__); do
-	echo "Starting Zookeeper on $SERVER";
 	ssh $SERVER "\
 		JMXDISABLE=INOWANTJMX \
 		SERVER_JVMFLAGS='-Xmx128m' \
