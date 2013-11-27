@@ -10,7 +10,8 @@ $HADOOP_COMMON_HOME/sbin/start-dfs.sh;
 $HADOOP_COMMON_HOME/sbin/start-yarn.sh;
 $HADOOP_COMMON_HOME/sbin/mr-jobhistory-daemon.sh start historyserver;
 
-for SERVER in $SERVERS; do
+# Only start zookeeper on the configured nodes
+for SERVER in $(cat $HADOOP_CONF_DIR/zookeeper.properties | grep ^server | sed s_server\.[0-9]=__ | sed s_:.*__); do
 	echo "Starting Zookeeper on $SERVER";
 	ssh $SERVER "\
 		JMXDISABLE=INOWANTJMX \
