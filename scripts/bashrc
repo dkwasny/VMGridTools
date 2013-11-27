@@ -1,0 +1,23 @@
+# Only contains stuff necessary for the "grid" to function.
+# Your bashrc should call this one.
+
+# User specific aliases and functions
+export GRID_HOME=/home/dkwasny/GridStuff;
+export JAVA_HOME=/home/dkwasny/Utilities/jdk1.7.0_45;
+export HADOOP_COMMON_HOME=/home/dkwasny/Utilities/hadoop-2.2.0;
+export HADOOP_HDFS_HOME=$HADOOP_COMMON_HOME;
+export HADOOP_MAPRED_HOME=$HADOOP_COMMON_HOME;
+export HADOOP_YARN_HOME=$HADOOP_COMMON_HOME;
+export HADOOP_CONF_DIR=$GRID_HOME/conf;
+export YARN_CONF_DIR=$HADOOP_CONF_DIR;
+export ZOOKEEPER_HOME=/home/dkwasny/Utilities/zookeeper-3.4.5;
+
+PATH=/home/dkwasny/Utilities/clang/bin:$PATH;
+PATH=$JAVA_HOME/bin:$PATH;
+PATH=$HADOOP_COMMON_HOME/bin:$PATH;
+
+alias vi=vim;
+alias grid-start="~/Scripts/grid-start.sh $HADOOP_COMMON_HOME";
+alias grid-stop="~/Scripts/grid-stop.sh $HADOOP_COMMON_HOME";
+alias grid-restart="grid-stop; grid-start";
+alias update-server-configs="~/Scripts/update-server-configs.sh";
