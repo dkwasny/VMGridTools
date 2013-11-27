@@ -20,4 +20,4 @@ alias vi=vim;
 alias grid-start="~/Scripts/grid-start.sh $HADOOP_COMMON_HOME";
 alias grid-stop="~/Scripts/grid-stop.sh $HADOOP_COMMON_HOME";
 alias grid-restart="grid-stop; grid-start";
-alias update-server-configs="~/Scripts/update-server-configs.sh";
+alias update-grid-homes="$GRID_HOME/scripts/update-grid-homes.sh";
