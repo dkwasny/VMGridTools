@@ -19,8 +19,7 @@ PATH=/home/dkwasny/Utilities/clang/bin:$PATH;
 PATH=$JAVA_HOME/bin:$PATH;
 PATH=$HADOOP_COMMON_HOME/bin:$PATH;
 
-alias vi=vim;
-alias grid-start="$GRID_HOME/scripts/grid-start.sh $HADOOP_COMMON_HOME";
-alias grid-stop="$GRID_HOME/scripts/grid-stop.sh $HADOOP_COMMON_HOME";
+alias grid-start="$GRID_HOME/scripts/grid-toggle.sh start";
+alias grid-stop="$GRID_HOME/scripts/grid-toggle.sh stop";
 alias grid-restart="grid-stop; grid-start";
 alias update-grid-homes="$GRID_HOME/scripts/update-grid-homes.sh";
