@@ -9,6 +9,6 @@ for SERVER in $(cat $HADOOP_CONF_DIR/zookeeper.properties | grep ^server | sed s
 	ssh $SERVER "\
 		JMXDISABLE=INOWANTJMX \
 		SERVER_JVMFLAGS='-Xmx128m' \
-		$ZOOKEEPER_HOME/bin/zkServer.sh stop $HADOOP_CONF_DIR/zookeeper.properties \
+		$ZOOKEEPER_HOME/bin/zkServer.sh stop $HADOOP_CONF_DIR/zoo.cfg \
 	";
 done;
