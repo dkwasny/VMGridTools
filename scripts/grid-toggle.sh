@@ -5,11 +5,6 @@ if [ "$1" != "start" ] && [ "$1" != "stop" ]; then
 	exit 1;
 fi;
 
-echo "I am a bad person...stopping iptables on the grid...actually setup the ports when you are not lazy!!";
-for SERVER in $(cat $HADOOP_CONF_DIR/slaves); do
-	ssh root@$SERVER service iptables stop;
-done;
-
 $HADOOP_COMMON_HOME/sbin/$1-dfs.sh;
 $HADOOP_COMMON_HOME/sbin/$1-yarn.sh;
 $HADOOP_COMMON_HOME/sbin/mr-jobhistory-daemon.sh $1 historyserver;
