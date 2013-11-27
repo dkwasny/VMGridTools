@@ -18,9 +18,9 @@ export HBASE_CONF_DIR=$HADOOP_CONF_DIR;
 export ZOOKEEPER_HOME=/home/dkwasny/Utilities/zookeeper-3.4.5;
 export ZOO_LOG_DIR=$ZOOKEEPER_HOME/logs
 
-PATH=/home/dkwasny/Utilities/clang/bin:$PATH;
 PATH=$JAVA_HOME/bin:$PATH;
 PATH=$HADOOP_COMMON_HOME/bin:$PATH;
+PATH=$HBASE_HOME/bin:$PATH;
 
 alias grid-start="$GRID_HOME/scripts/grid-toggle.sh start";
 alias grid-stop="$GRID_HOME/scripts/grid-toggle.sh stop";
