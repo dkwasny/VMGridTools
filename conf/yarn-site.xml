@@ -48,7 +48,7 @@
 	<!-- Node Manager -->
 	<property>
 		<name>yarn.nodemanager.address</name>
-		<value>${yarn.nodemanager.hostname}:51099</value>
+		<value>${yarn.nodemanager.hostname}:51101</value>
 	</property>
 	<property>
 		<name>yarn.nodemanager.aux-services</name>
