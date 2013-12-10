@@ -23,7 +23,7 @@
 <configuration>
 	<property>
 		<name>hbase.tmp.dir</name>
-		<value>/home/dkwasny/Utilities/hbase-0.96.0-hadoop2/var/tmp</value>
+		<value>/tmp/hbase/tmp</value>
 	</property>
 	<property>
 		<name>hbase.rootdir</name>
@@ -39,7 +39,7 @@
 	</property>
 	<property>
 		<name>hbase.local.dir</name>
-		<value>/home/dkwasny/Utilities/hbase-0.96.0-hadoop2/var/local</value>
+		<value>/tmp/hbase/local</value>
 	</property>
 	<property>
 		<name>hbase.regionserver.handler.count</name>
