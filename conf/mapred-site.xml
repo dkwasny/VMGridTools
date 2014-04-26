@@ -51,10 +51,28 @@
 		<value>-Xmx450m</value>
 	</property>
 
+	<!-- Compression settings -->
+	<property>
+		<name>mapreduce.output.fileoutputformat.compress</name>
+		<value>true</value>
+	</property>
+	<property>
+		<name>mapreduce.output.fileoutputformat.compress.codec</name>
+		<value>org.apache.hadoop.io.compress.GzipCodec</value>
+	</property>
+	<property>
+		<name>mapreduce.map.output.compress</name>
+		<value>true</value>
+	</property>
+	<property>
+		<name>mapreduce.map.output.compress.codec</name>
+		<value>org.apache.hadoop.io.compress.GzipCodec</value>
+	</property>
+
 	<!-- Yarn Mapreduce -->
 	<property>
 		<name>yarn.app.mapreduce.am.command-opts</name>
-		<value>-Xmx256m</value>
+		<value>-Xmx230m</value>
 	</property>
 	<property>
 		<name>yarn.app.mapreduce.am.job.task.listener.thread-count</name>

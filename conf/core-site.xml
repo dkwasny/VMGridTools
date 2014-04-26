@@ -21,4 +21,8 @@
 		<name>fs.defaultFS</name>
 		<value>hdfs://centos-1:8020</value>
 	</property>
+	<property>
+		<name>io.compression.codecs</name>
+		<value>org.apache.hadoop.io.compress.GzipCodec</value>
+	</property>
 </configuration>
