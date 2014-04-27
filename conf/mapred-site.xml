@@ -60,6 +60,15 @@
 		<name>mapreduce.output.fileoutputformat.compress.codec</name>
 		<value>org.apache.hadoop.io.compress.GzipCodec</value>
 	</property>
+	<!--
+		BLOCK compression makes sense for a VM grid on one machine since
+		we cannot really take advantage of the parallelism that RECORD 
+		level compression gives.
+	-->
+	<property>
+		<name>mapreduce.output.fileoutputformat.compress.type</name>
+		<value>BLOCK</value>
+	</property>
 	<property>
 		<name>mapreduce.map.output.compress</name>
 		<value>true</value>
