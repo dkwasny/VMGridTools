@@ -22,7 +22,16 @@ PATH=$JAVA_HOME/bin:$PATH;
 PATH=$HADOOP_COMMON_HOME/bin:$PATH;
 PATH=$HBASE_HOME/bin:$PATH;
 
-alias grid-start="$GRID_HOME/scripts/grid-toggle.sh start";
-alias grid-stop="$GRID_HOME/scripts/grid-toggle.sh stop";
+
+alias hadoop-start="$GRID_HOME/scripts/hadoop-toggle.sh start";
+alias hadoop-stop="$GRID_HOME/scripts/hadoop-toggle.sh stop";
+alias zookeeper-start="$GRID_HOME/scripts/zookeeper-toggle.sh start";
+alias zookeeper-stop="$GRID_HOME/scripts/zookeeper-toggle.sh stop";
+alias hbase-start="$GRID_HOME/scripts/hbase-toggle.sh start";
+alias hbase-stop="$GRID_HOME/scripts/hbase-toggle.sh stop";
+
+alias grid-start="hadoop-start; zookeeper-start; hbase-start";
+alias grid-stop="hbase-stop; zookeper-stop; hadoop-stop";
 alias grid-restart="grid-stop; grid-start";
+
 alias update-grid-homes="$GRID_HOME/scripts/update-grid-homes.sh";
