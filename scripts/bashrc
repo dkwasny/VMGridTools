@@ -31,7 +31,7 @@ alias hbase-start="$GRID_HOME/scripts/hbase-toggle.sh start";
 alias hbase-stop="$GRID_HOME/scripts/hbase-toggle.sh stop";
 
 alias grid-start="hadoop-start; zookeeper-start; hbase-start";
-alias grid-stop="hbase-stop; zookeper-stop; hadoop-stop";
+alias grid-stop="hbase-stop; zookeeper-stop; hadoop-stop";
 alias grid-restart="grid-stop; grid-start";
 
 alias update-grid-homes="$GRID_HOME/scripts/update-grid-homes.sh";
