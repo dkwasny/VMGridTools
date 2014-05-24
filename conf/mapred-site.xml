@@ -44,11 +44,11 @@
 	</property>
 	<property>
 		<name>mapreduce.reduce.memory.mb</name>
-		<value>512</value>
+		<value>768</value>
 	</property>
 	<property>
 		<name>mapreduce.reduce.java.opts</name>
-		<value>-Xmx450m</value>
+		<value>-Xmx700m</value>
 	</property>
 
 	<!-- Compression settings -->
