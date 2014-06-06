@@ -34,7 +34,8 @@ alias hbase-stop="$GRID_HOME/scripts/hbase-toggle.sh stop";
 alias tomcat-start="$CATALINA_HOME/bin/startup.sh";
 alias tomcat-stop="$CATALINA_HOME/bin/shutdown.sh";
 alias tomcat-restart="tomcat-stop; tomcat-start"
-alias tomcat-grid-toggle="$GRID_HOME/scripts/tomcat-grid-toggle.sh";
+alias tomcat-grid-start="$GRID_HOME/scripts/tomcat-grid-toggle.sh start";
+alias tomcat-grid-stop="$GRID_HOME/scripts/tomcat-grid-toggle.sh stop";
 
 alias grid-start="hadoop-start; zookeeper-start; hbase-start";
 alias grid-stop="hbase-stop; zookeeper-stop; hadoop-stop";
