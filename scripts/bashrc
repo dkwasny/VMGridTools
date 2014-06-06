@@ -18,10 +18,11 @@ export HBASE_CONF_DIR=$HADOOP_CONF_DIR;
 export ZOOKEEPER_HOME=/home/dkwasny/Utilities/zookeeper-3.4.5;
 export ZOO_LOG_DIR=$ZOOKEEPER_HOME/logs
 
+export CATALINA_HOME=/home/dkwasny/Utilities/apache-tomcat-8.0.5;
+
 PATH=$JAVA_HOME/bin:$PATH;
 PATH=$HADOOP_COMMON_HOME/bin:$PATH;
 PATH=$HBASE_HOME/bin:$PATH;
-
 
 alias hadoop-start="$GRID_HOME/scripts/hadoop-toggle.sh start";
 alias hadoop-stop="$GRID_HOME/scripts/hadoop-toggle.sh stop";
@@ -29,6 +30,11 @@ alias zookeeper-start="$GRID_HOME/scripts/zookeeper-toggle.sh start";
 alias zookeeper-stop="$GRID_HOME/scripts/zookeeper-toggle.sh stop";
 alias hbase-start="$GRID_HOME/scripts/hbase-toggle.sh start";
 alias hbase-stop="$GRID_HOME/scripts/hbase-toggle.sh stop";
+
+alias tomcat-start="$CATALINA_HOME/bin/startup.sh";
+alias tomcat-stop="$CATALINA_HOME/bin/shutdown.sh";
+alias tomcat-restart="tomcat-stop; tomcat-start"
+alias tomcat-grid-toggle="$GRID_HOME/scripts/tomcat-grid-toggle.sh";
 
 alias grid-start="hadoop-start; zookeeper-start; hbase-start";
 alias grid-stop="hbase-stop; zookeeper-stop; hadoop-stop";
