@@ -1,4 +1,3 @@
-VMGridTools
+This project is deprecated!
 ===========
-
-The configrations and tools I hacked together while setting up a Hadoop 2.2.0 VM grid
+Go see [https://github.com/dkwasny/PuppetConfig](PuppetConfig) for a slightly more sane way to configure a Hadoop cluster.
